@@ -1,0 +1,143 @@
+// Mixins
+
+@mixin box-shadow($shadows...) {
+    box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+}
+
+@mixin border($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+
+@mixin rounded($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin grayfilter {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+@mixin gradientborder {
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #81ee8e 0%, #11C6E7 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #81ee8e 0%, #11C6E7 100%) repeat scroll 0 0;
+}
+
+@mixin bottomshade {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+@mixin overlay-left-right-white {
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(80%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
+}
+
+@mixin flexcol {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flexrow {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+
+@mixin flexrowajcenter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+@mixin flex100 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+@mixin transY-50 {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: rgba($color, $opacity);
+}
+
+@mixin color-opacity($color, $opacity: 0.3) {
+    color: rgba($color, $opacity);
+}
+
+@mixin button-solid($bg) {
+    background: $bg;
+    border: 2px solid $bg;
+    &:hover {
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background: $bg;
+    }
+}
+
+@mixin button-border($bg) {
+    background: transparent;
+    border: 2px solid $bg;
+    &:hover {
+        background: $bg;
+        transition: all 0.3s ease;
+    }
+    &:active {
+        border: 1px solid $bg;
+    }
+}
+
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: $color;
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $color;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: $color;
+    }
+}

@@ -1,0 +1,19 @@
+body
+{
+  background-color: red !important;
+}
+
+
+// Bootstrap and its default variables
+@import '../vendor/BS5/scss/bootstrap';
+
+// Your style
+@import 'mixins';
+@import 'variables';
+@import 'break-points';
+@import 'typography';
+@import 'button';
+@import 'general';
+@import 'header';
+@import 'footer';
+@import 'components';

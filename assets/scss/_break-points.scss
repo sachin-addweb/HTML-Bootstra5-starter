@@ -1,0 +1,17 @@
+
+
+/* Media Query Break Point START */
+
+$brkmx1400: '(max-width: 1399.98px)';
+$brkmx1200: '(max-width: 1199.98px)';
+$brkmx992: '(max-width: 991.98px)';
+$brkmx768: '(max-width: 767.98px)';
+$brkmx576: '(max-width: 575.98px)';
+
+@mixin respond-to($media) {
+    @media only screen and #{$media} {
+        @content;
+    } 
+}
+
+/* Media Query Break Point END */

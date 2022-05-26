@@ -1,0 +1,37 @@
+// General Style
+body {
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	-webkit-overflow-scrolling: touch;
+}
+/* COMMON DESIGN START */
+
+a {
+	text-decoration: none;
+	transition: 0.5s all ease;
+ &:hover {
+ text-decoration: none;
+}
+}
+h1, h2, h3, h4, h5, h6, p, ul li {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ol {
+	margin: 0;
+	padding: 0;
+ li {
+ list-style-position: inside;
+}
+}
+/* COMMON DESIGN END */
+
