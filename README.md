@@ -1,4 +1,4 @@
-# gulp 4 SASS JS Images
+# gulp 4 SASS JS
 
 ## Pre-requisite
 - [Node.js](https://nodejs.org/en/download/ "Node Js")
@@ -12,11 +12,17 @@ Install Gulp cli
 
 ## Getting started
 
-1. Install all dependencies and libraries:
+1] Install all dependencies and libraries:
    `npm install`
 
-2. Run Gulp Task:
+2] Run Gulp Task:
   - `gulp`      - To compile scss to css, minify css and js and build ready for production files in **dist** folder.
 
   - `gulp dev`  - Starts a local server with browserSync and hot reloading on changes to files (HTML, SCSS, JS).
    
+
+## app.js
+1] JQUERY 3.5
+2] BOOTSTRAP 5.2.3
+3] CUSTOM JS
+---- If you want to add other third party JS do add above Custom JS 
