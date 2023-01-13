@@ -13,6 +13,6 @@
 //# sourceMappingURL=bootstrap.bundle.min.js.map
 // BOOTSTRAP 5.2.3 END
 
-// 3] CUSTOM JS START
+// CUSTOM JS START
 
 // CUSTOM JS END

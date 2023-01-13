@@ -1,12 +1,11 @@
 "use strict";
 
-var gulp = require('gulp'),
+  var gulp = require('gulp'),
   sass = require('gulp-sass'),
   del = require('del'),
   uglify = require('gulp-uglify'),
   cleanCSS = require('gulp-clean-css'),
   rename = require("gulp-rename"),
-  merge = require('merge-stream'),
   htmlreplace = require('gulp-html-replace'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync').create();
@@ -15,7 +14,6 @@ var gulp = require('gulp'),
 gulp.task('clean', function () {
   return del(['dist', 'assets/css/app.css']);
 });
-
 
 // Compile SCSS(SASS) files
 gulp.task('scss', function compileScss() {
