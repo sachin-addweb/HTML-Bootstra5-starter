@@ -23,6 +23,9 @@ Install Gulp cli
 
 ## app.js
 1] JQUERY 3.5
+
 2] BOOTSTRAP 5.2.3
+
 3] CUSTOM JS
+
 ---- If you want to add other third party JS do add above Custom JS 
