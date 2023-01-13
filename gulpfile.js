@@ -8,6 +8,7 @@
   rename = require("gulp-rename"),
   htmlreplace = require('gulp-html-replace'),
   autoprefixer = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
   browserSync = require('browser-sync').create();
 
 // Clean task
@@ -39,9 +40,12 @@ gulp.task('css:minify', gulp.series('scss', function cssMinify() {
 // Minify Js
 gulp.task('js:minify', function () {
   return gulp.src([
-    './assets/js/app.js'
+    './assets/js/jquery-3.6.3.js',
+     './assets/js/bootstrap.bundle.js',
+    './assets/js/custom.js'
   ])
     .pipe(uglify())
+    .pipe(concat('bundle.js'))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -53,7 +57,7 @@ gulp.task('js:minify', function () {
 gulp.task('replaceHtmlBlock', function () {
   return gulp.src(['*.html'])
     .pipe(htmlreplace({
-      'js': 'assets/js/app.min.js',
+      'js': 'assets/js/*.js',
       'css': 'assets/css/app.min.css'
     }))
     .pipe(gulp.dest('dist/'));
@@ -70,7 +74,7 @@ gulp.task('dev', function browserDev(done) {
     browserSync.reload();
     done(); //Async callback for completion.
   }));
-  gulp.watch('assets/js/app.js', gulp.series('js:minify', function jsBrowserReload(done) {
+  gulp.watch('assets/js/*.js', gulp.series('js:minify', function jsBrowserReload(done) {
     browserSync.reload();
     done();
   }));
