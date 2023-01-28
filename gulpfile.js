@@ -40,7 +40,6 @@ gulp.task('css:minify', gulp.series('scss', function cssMinify() {
 // Minify Js
 gulp.task('js:minify', function () {
   return gulp.src([
-    './assets/js/jquery-3.6.3.js',
      './assets/js/bootstrap.bundle.js',
     './assets/js/custom.js'
   ])
