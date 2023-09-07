@@ -40,11 +40,11 @@ gulp.task('css:minify', gulp.series('scss', function cssMinify() {
 // Minify Js
 gulp.task('js:minify', function () {
   return gulp.src([
-     './assets/js/bootstrap.bundle.js',
+   //  './assets/js/bootstrap.bundle.js',
     './assets/js/custom.js'
   ])
     .pipe(uglify())
-    .pipe(concat('bundle.js'))
+    // .pipe(concat('bundle.js'))
     .pipe(rename({
       suffix: '.min'
     }))
