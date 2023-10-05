@@ -19,6 +19,3 @@ Install Gulp cli
   - `gulp`      - To compile scss to css, minify css and js and build ready for production files in **dist** folder.
 
   - `gulp dev`  - Starts a local server with browserSync and hot reloading on changes to files (HTML, SCSS, JS).
-   
-## JS Files
-  -- All the JS file call from the `gulpfile.js`
