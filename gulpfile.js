@@ -9,7 +9,9 @@
   htmlreplace = require('gulp-html-replace'),
   autoprefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat'),
+  babel = require('gulp-babel'),
   browserSync = require('browser-sync').create();
+
 
 // Clean task
 gulp.task('clean', function () {
@@ -43,6 +45,9 @@ gulp.task('js:minify', function () {
    //  './assets/js/bootstrap.bundle.js',
     './assets/js/custom.js'
   ])
+    .pipe(babel({
+            presets: ['@babel/env']
+    }))
     .pipe(uglify())
     // .pipe(concat('bundle.js'))
     .pipe(rename({
